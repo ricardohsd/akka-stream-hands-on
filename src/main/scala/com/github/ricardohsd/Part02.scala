@@ -12,11 +12,15 @@ class Part02 {
 
   // TODO use testkit to check it emits "foo" and "bar" values then completes
   def expectFooBar(source: Source[String, NotUsed]) = {
-    ???
+    source.runWith(TestSink.probe[String])
+      .requestNext("foo")
+      .requestNext("bar")
+      .expectComplete()
   }
 
   // TODO use testkit to check it emits an exception
   def expectException(source: Source[String, NotUsed]) = {
-    ???
+    source.runWith(TestSink.probe[String])
+      .expectSubscriptionAndError(CustomException("Failed"))
   }
 }
