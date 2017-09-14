@@ -2,8 +2,9 @@
 
 This repo contains a set of examples showing how to use Akka Stream api and how to test it.
 
-[akka-stream](http://doc.akka.io/docs/akka/2.5.4/scala/stream/index.html)
-[akka-stream-testkit](http://doc.akka.io/docs/akka/2.5.4/scala/stream/stream-testkit.html)
+You can read more about Akka Streams on:
+ - [akka-stream](http://doc.akka.io/docs/akka/2.5.4/scala/stream/index.html)
+ - [akka-stream-testkit](http://doc.akka.io/docs/akka/2.5.4/scala/stream/stream-testkit.html)
 
 You can try to solve the examples contained in this repo by:
 
