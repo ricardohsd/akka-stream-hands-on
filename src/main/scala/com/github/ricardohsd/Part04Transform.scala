@@ -1,5 +1,7 @@
 package com.github.ricardohsd
 
+import akka.stream.scaladsl.{Flow, Source}
+
 case class User(name: String)
 
 object Users {
@@ -15,8 +17,12 @@ object Users {
 
 class Part04Transform {
   // TODO Capitalize the user's name. Check Flow api
-  def capitalizeNames = ???
+  def capitalizeNames = Flow[User].map { user =>
+    user.copy(name = user.name.toUpperCase)
+  }
 
   // TODO Filter only users with name that starts with 'd'. Check Flow api
-  def filterNames = ???
+  def filterNames = Flow[User].filter { user =>
+    user.name.startsWith("d")
+  }
 }
